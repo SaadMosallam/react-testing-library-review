@@ -1,6 +1,10 @@
-function Greet() {
+type GreetProps = {
+  name?: string
+}
+
+function Greet({ name }: GreetProps) {
   return (
-    <div>Hello</div>
+    <div>{name ? `Hello ${name}` : 'Hello'}</div>
   )
 }
 
